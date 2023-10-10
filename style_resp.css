@@ -1,0 +1,32 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f0fa; /* Cor de fundo lilás claro */
+    color: #333; /* Cor do texto */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Tornar o corpo do documento um contêiner flexível */
+    flex-direction: column; /* Alinhar elementos verticalmente */
+    justify-content: center; /* Centralizar verticalmente */
+    align-items: center; /* Centralizar horizontalmente */
+    min-height: 100vh; /* Altura mínima de visualização */
+}
+
+.container {
+    text-align: center; /* Centralizar o conteúdo horizontalmente */
+    max-width: 600px;
+    padding: 20px;
+    background-color: #fff; /* Cor de fundo branca para o conteúdo */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    margin-bottom: 20px; /* Espaçamento inferior entre o texto e a imagem */
+}
+
+#mensagem {
+    font-size: 18px;
+    color: #800080; /* Cor lilás */
+}
+
+.imagem-responsiva {
+    max-width: 100%; /* A imagem não deve exceder a largura do contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+}

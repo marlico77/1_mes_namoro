@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en"> <!-- Define o idioma da página como inglês -->
+<head>
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Define a viewport para responsividade -->
+    <title>Página de Resposta</title> <!-- Define o título da página exibido na aba do navegador -->
+    <link rel="stylesheet" href="./style_resp.css"> <!-- Vincula um arquivo CSS externo chamado "style_resp.css" para estilização -->
+</head>
+<body>
+    <div id="mensagem"></div> <!-- Cria uma divisão com o ID "mensagem" para exibir a mensagem -->
+    <img src="./Gifs de coração - Imagens de Coração que se Mexem - Gifs e Imagens Animadas.gif" alt="Coração"
+        class="imagem-responsiva"> <br> <!-- Insere uma imagem responsiva com uma descrição "Coração" -->
+    <a href="https://www.youtube.com/watch?v=5QzdBsZ2PI0&ab_channel=NossaM%C3%BAsicaNossaVida" target="_blank">Clique
+        aqui, quando terminar de ler</a> <!-- Cria um link para um vídeo do YouTube que se abre em uma nova guia -->
+
+    <script>
+        // Recupere o valor do nome da URL da primeira página
+        const urlParams = new URLSearchParams(window.location.search);
+        const nome = urlParams.get("username");
+
+        // Exiba a mensagem personalizada na página
+        const mensagemElement = document.getElementById("mensagem");
+        if (nome) {
+            const mensagem = `${nome}, Apenas um mês se passou, mas quero que saiba que você já tem um espaço em meu coração, talvez pareça clichê, 
+            mas você é muito importante para mim. Sua maneira de demonstrar afeto através da presença, parceria, palavras, etc. 
+            Me encantam cada vez mais, saiba que sempre estarei ao seu lado, te respeitando, te amando, e aberto sempre ao que precisar de mim, 
+            quero me tornar seu melhor amigo. Palavras não bastam, mas saiba que em TUDO pode confiar em, assim como sempre acreditarei e confiarei em você, feliz mais um mês meu bem ❤️.`;
+            mensagemElement.textContent = mensagem;
+        } else {
+            mensagemElement.textContent = "Nome não encontrado";
+        }
+    </script> <!-- Inclui um script JavaScript para manipular o conteúdo da página -->
+</body>
+</html>
