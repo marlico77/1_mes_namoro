@@ -9,13 +9,26 @@ body {
     min-height: 100vh;
 }
 
+.container {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff; /* Cor de fundo branca para destacar o conteúdo */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    display: flex;
+    flex-direction: column; /* Altera o layout para uma coluna */
+    align-items: center;
+}
+
 h1 {
     font-size: 36px;
-    color: #800080; /* Cor lilás para o texto */
-    text-align: center;
-    text-transform: uppercase; /* Transforma o texto em maiúsculas */
+    color: #800080; /* Cor lilás para o título */
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+#contador {
+    font-size: 24px;
+    color: #800080; /* Cor lilás para o texto da contagem regressiva */
     padding: 20px;
-    background-color: #fff; /* Cor de fundo branca para destacar o texto */
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
 }
