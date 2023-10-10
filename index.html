@@ -1,61 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"> <!-- Define o idioma da página como inglês -->
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grande Dia</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Define a viewport para responsividade -->
+    <title>Grande Dia</title> <!-- Define o título da página exibido na aba do navegador -->
+    <link rel="stylesheet" href="style.css"> <!-- Vincula um arquivo CSS externo chamado "style.css" para estilização -->
 </head>
 <body>
-    <div class="container">
-        <h1>Contagem Regressiva</h1>
-        <div id="contador"></div>
-    </div>
-
-    <script>
-        // Função para calcular o tempo restante
-        function calcularTempoRestante() {
-            const agora = new Date();
-            const alvo = new Date();
-            alvo.setHours(10, 0, 0, 0); // Define a hora alvo como 10:00 da manhã
-
-            let diferenca = alvo - agora;
-
-            const horas = Math.floor(diferenca / (1000 * 60 * 60));
-            diferenca -= horas * (1000 * 60 * 60);
-
-            const minutos = Math.floor(diferenca / (1000 * 60));
-            diferenca -= minutos * (1000 * 60);
-
-            const segundos = Math.floor(diferenca / 1000);
-
-            return {
-                horas,
-                minutos,
-                segundos
-            };
-        }
-
-        // Função para atualizar a contagem regressiva
-        function atualizarContagemRegressiva() {
-            const tempoRestante = calcularTempoRestante();
-
-            const contadorElement = document.getElementById("contador");
-            contadorElement.innerHTML = `
-                <p>Faltam ${tempoRestante.horas} horas, ${tempoRestante.minutos} minutos e ${tempoRestante.segundos} segundos</p>
-            `;
-
-            if (tempoRestante.horas <= 0 && tempoRestante.minutos <= 0 && tempoRestante.segundos <= 0) {
-                contadorElement.innerHTML = "<p>É 10:00 da manhã!</p>";
-                clearInterval(contadorInterval);
-            }
-        }
-
-        // Inicializa a contagem regressiva e atualiza a cada segundo
-        const contadorInterval = setInterval(atualizarContagemRegressiva, 1000);
-
-        // Chama a função de atualização inicialmente
-        atualizarContagemRegressiva();
-    </script>
+    <form action="resp.html"> <!-- Cria um formulário com ação definida para "resp.html" -->
+        <label for="username">Digite seu nome completo</label> <br> <!-- Rótulo para um campo de entrada -->
+        <input type="text" id="username" name="username" required> <br> <!-- Campo de entrada de texto obrigatório -->
+        
+        <input type="submit" value="Entrar"> <!-- Botão de envio do formulário -->
+    </form>
 </body>
 </html>
